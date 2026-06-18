@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Sweet Spot Tennis Shop — Vancouver, BC</title>
+    <meta name="description" content="Local tennis racquet stringing service in Vancouver BC. Serving Downtown, Strathcona, and Commercial Drive. $15 labor. Electronic Gamma 6pt mount machine with Wise 2086. 24-hour turnaround." />
+
+    <!-- OpenGraph -->
+    <meta property="og:title" content="The Sweet Spot Tennis Shop" />
+    <meta property="og:description" content="Local tennis racquet stringing in Vancouver BC. $15 labor. Serving Downtown, Strathcona &amp; Commercial Drive. 24-hour turnaround." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://enzozafra.com/thesweetspottennisshop" />
+    <meta property="og:image" content="https://enzozafra.com/site/images/sweetspot.jpg" />
+    <meta property="og:image:alt" content="The Sweet Spot Tennis Shop" />
+    <meta property="og:site_name" content="The Sweet Spot Tennis Shop" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="The Sweet Spot Tennis Shop" />
+    <meta name="twitter:description" content="Local tennis racquet stringing in Vancouver BC. $15 labor. 24-hour turnaround." />
+    <meta name="twitter:image" content="https://enzozafra.com/site/images/sweetspot.jpg" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      :root {
+        --red:    #E8342A;
+        --blue:   #1B5FC1;
+        --yellow: #F5C300;
+        --green:  #2E9E4F;
+        --purple: #6B3FA0;
+        --cyan:   #00A8E8;
+        --black:  #111111;
+        --white:  #FFFFFF;
+        --off:    #F4F4F0;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        background: var(--off);
+        color: var(--black);
+        line-height: 1.5;
+      }
+
+      /* ── HERO ─────────────────────────────────── */
+      .hero {
+        background: var(--black);
+        position: relative;
+        overflow: hidden;
+        padding: 56px 32px 48px;
+        text-align: left;
+      }
+
+      /* diagonal white stripe in background */
+      .hero::before {
+        content: '';
+        position: absolute;
+        top: -60px; right: -80px;
+        width: 380px; height: 380px;
+        background: var(--white);
+        transform: rotate(45deg);
+        opacity: 0.06;
+        pointer-events: none;
+      }
+
+      /* big geometric accent circle */
+      .hero::after {
+        content: none;
+      }
+
+      .hero-inner {
+        max-width: 860px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 32px;
+        align-items: end;
+      }
+
+      .hero-text { grid-column: 1; }
+
+      .hero-img-wrap {
+        grid-column: 2;
+        align-self: center;
+        flex-shrink: 0;
+      }
+
+      .hero-img-wrap img {
+        width: 220px;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+        outline: 6px solid var(--yellow);
+        outline-offset: -6px;
+      }
+
+      @media (max-width: 640px) {
+        .hero-inner {
+          grid-template-columns: 1fr;
+        }
+        .hero-img-wrap {
+          grid-column: 1;
+          order: -1;
+        }
+        .hero-img-wrap img {
+          width: 100%;
+          height: 200px;
+        }
+      }
+
+      .hero-eyebrow {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--yellow);
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .hero-eyebrow::before {
+        content: '';
+        display: inline-block;
+        width: 28px;
+        height: 3px;
+        background: var(--yellow);
+        flex-shrink: 0;
+      }
+
+      .hero-title {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: clamp(4rem, 14vw, 9rem);
+        line-height: 0.9;
+        letter-spacing: 0.01em;
+        margin-bottom: 24px;
+      }
+
+      .hero-title .w1 { color: var(--white); display: block; }
+      .hero-title .w2 { color: var(--red);   display: block; }
+      .hero-title .w3 { color: var(--blue);  display: block; }
+
+      .hero-sub {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: clamp(1.4rem, 4vw, 2.4rem);
+        letter-spacing: 0.08em;
+        color: var(--yellow);
+        margin-bottom: 32px;
+      }
+
+      .hero-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .hero-badge {
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        padding: 6px 14px;
+        border: 2px solid;
+      }
+
+      .hb-white  { color: var(--white);  border-color: var(--white); }
+      .hb-green  { color: var(--green);  border-color: var(--green); }
+      .hb-cyan   { color: var(--cyan);   border-color: var(--cyan); }
+
+      /* ── LAYOUT ───────────────────────────────── */
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+      }
+
+      @media (max-width: 580px) {
+        .grid-2 { grid-template-columns: 1fr; }
+      }
+
+      /* ── PRICE BLOCK ──────────────────────────── */
+      .block-price {
+        background: var(--red);
+        color: var(--white);
+        padding: 44px 36px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .block-price::after {
+        content: '$';
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 18rem;
+        line-height: 1;
+        color: rgba(0,0,0,0.12);
+        position: absolute;
+        bottom: -40px; right: -20px;
+        pointer-events: none;
+        user-select: none;
+      }
+
+      .block-label {
+        font-size: 0.68rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        opacity: 0.8;
+        margin-bottom: 12px;
+      }
+
+      .block-price .big-num {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: clamp(5rem, 12vw, 7rem);
+        line-height: 1;
+        letter-spacing: -0.01em;
+        margin-bottom: 6px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .block-price .per {
+        font-size: 1rem;
+        font-weight: 600;
+        opacity: 0.85;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 20px;
+      }
+
+      .block-price .note {
+        font-size: 0.82rem;
+        opacity: 0.8;
+        position: relative;
+        z-index: 1;
+        max-width: 240px;
+      }
+
+      /* ── LOCATION BLOCK ───────────────────────── */
+      .block-location {
+        background: var(--blue);
+        color: var(--white);
+        padding: 44px 36px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .block-location::after {
+        content: '';
+        position: absolute;
+        top: -30px; right: -30px;
+        width: 160px; height: 160px;
+        background: var(--cyan);
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        opacity: 0.25;
+        pointer-events: none;
+      }
+
+      .block-location .areas {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .area-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.9rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .area-tag::before {
+        content: '';
+        display: inline-block;
+        width: 10px; height: 10px;
+        background: var(--yellow);
+        flex-shrink: 0;
+      }
+
+      .block-location .machine {
+        margin-top: 24px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255,255,255,0.2);
+        font-size: 0.78rem;
+        opacity: 0.8;
+        position: relative;
+        z-index: 1;
+      }
+
+      /* ── SECTION TITLE STRIP ─────────────────── */
+      .section-title-strip {
+        background: var(--black);
+        padding: 0 36px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .section-title-strip h2 {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: clamp(2rem, 5vw, 3rem);
+        letter-spacing: 0.05em;
+        color: var(--white);
+        padding: 18px 0;
+      }
+
+      .strip-accent {
+        height: 6px;
+        flex: 1;
+      }
+
+      /* ── STRINGS TABLE ────────────────────────── */
+      .strings-section {
+        background: var(--white);
+        padding: 0 36px 36px;
+      }
+
+      .strings-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.88rem;
+      }
+
+      .strings-table thead tr {
+        border-bottom: 3px solid var(--black);
+      }
+
+      .strings-table th {
+        font-size: 0.62rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        color: var(--black);
+        padding: 18px 12px 14px 0;
+        text-align: left;
+      }
+
+      .strings-table th:last-child { text-align: right; }
+
+      .strings-table td {
+        padding: 16px 12px 16px 0;
+        border-bottom: 1px solid #E0E0DC;
+        vertical-align: middle;
+      }
+
+      .strings-table td:last-child { text-align: right; }
+
+      .strings-table tr:last-child td { border-bottom: none; }
+
+      .strings-table tr {
+        border-left: 4px solid transparent;
+        transition: border-color 0.15s;
+      }
+
+      .string-name {
+        font-weight: 700;
+        font-size: 0.9rem;
+        color: var(--black);
+      }
+
+      .color-swatch {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .swatch-bar {
+        width: 40px;
+        height: 8px;
+        border-radius: 2px;
+        display: inline-block;
+        flex-shrink: 0;
+      }
+
+      .swatch-label {
+        font-size: 0.8rem;
+        color: #555;
+        font-weight: 500;
+      }
+
+      /* shape badges — each a Bauhaus primary color */
+      .shape-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px; height: 30px;
+        font-weight: 900;
+        font-size: 0.72rem;
+        color: var(--white);
+        flex-shrink: 0;
+      }
+
+      .sb-red    { background: var(--red);    }
+      .sb-blue   { background: var(--blue);   }
+      .sb-yellow { background: var(--yellow); color: var(--black); }
+      .sb-green  { background: var(--green);  }
+      .sb-purple { background: var(--purple); }
+
+      .shape-badge.circle  { border-radius: 50%; }
+      .shape-badge.square  { border-radius: 0; }
+      .shape-badge.diamond { transform: rotate(45deg); border-radius: 0; }
+      .shape-badge.diamond span { transform: rotate(-45deg); display: block; }
+
+      .string-price {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 1.5rem;
+        letter-spacing: 0.02em;
+        color: var(--black);
+      }
+
+      .sold-out-badge {
+        background: var(--black);
+        color: var(--red);
+        font-size: 0.62rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        padding: 4px 8px;
+      }
+
+      .string-name-struck {
+        text-decoration: line-through;
+        color: #999;
+        font-weight: 600;
+      }
+
+      .shape-key {
+        font-size: 0.72rem;
+        color: #777;
+        font-weight: 600;
+        margin-top: 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        align-items: center;
+      }
+
+      .shape-key-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      /* ── ADD-ONS ──────────────────────────────── */
+      .addons-section {
+        background: var(--yellow);
+        padding: 44px 36px;
+      }
+
+      .addons-section h2 {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: clamp(2rem, 5vw, 3rem);
+        letter-spacing: 0.05em;
+        color: var(--black);
+        margin-bottom: 28px;
+      }
+
+      .addon-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .addon-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 0;
+        border-bottom: 2px solid rgba(0,0,0,0.12);
+        gap: 24px;
+      }
+
+      .addon-item:last-child { border-bottom: none; }
+
+      .addon-name {
+        font-weight: 700;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+
+      .addon-price {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 1.6rem;
+        letter-spacing: 0.02em;
+        color: var(--black);
+        white-space: nowrap;
+      }
+
+      /* ── FOOTER ───────────────────────────────── */
+      footer {
+        background: var(--black);
+        color: var(--white);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 36px;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      footer .footer-brand {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 1.1rem;
+        letter-spacing: 0.08em;
+        color: var(--yellow);
+      }
+
+      footer a {
+        color: #888;
+        font-size: 0.78rem;
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      footer a:hover { color: var(--white); }
+
+      /* ── COLOR ROW ACCENTS ───────────────────── */
+      /* left border color per string brand */
+      tr.row-accent-red    { border-left: 4px solid var(--red); }
+      tr.row-accent-blue   { border-left: 4px solid var(--blue); }
+      tr.row-accent-green  { border-left: 4px solid var(--green); }
+      tr.row-accent-yellow { border-left: 4px solid var(--yellow); }
+      tr.row-accent-cyan   { border-left: 4px solid var(--cyan); }
+      tr.row-accent-purple { border-left: 4px solid var(--purple); }
+      tr.row-accent-grey   { border-left: 4px solid #888; }
+
+      .strings-table td:first-child { padding-left: 14px; }
+      .strings-table th:first-child { padding-left: 14px; }
+
+      @media (max-width: 600px) {
+        .strings-table th:nth-child(3),
+        .strings-table td:nth-child(3) { display: none; }
+        .hero { padding: 40px 20px 36px; }
+        .block-price, .block-location { padding: 32px 24px; }
+        .strings-section { padding: 0 20px 28px; }
+        .section-title-strip { padding: 0 20px; }
+        .addons-section { padding: 32px 24px; }
+        footer { padding: 18px 20px; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- ── HERO ── -->
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="hero-eyebrow">Vancouver, BC &nbsp;·&nbsp; Strathcona</div>
+          <h1 class="hero-title">
+            <span class="w1">The</span>
+            <span class="w2">Sweet</span>
+            <span class="w3">Spot</span>
+          </h1>
+          <p class="hero-sub">Tennis Shop</p>
+          <div class="hero-badges">
+            <span class="hero-badge hb-white">24-hour turnaround</span>
+            <span class="hero-badge hb-green">Downtown · Strathcona · Commercial Drive</span>
+            <span class="hero-badge hb-cyan">Gamma 6pt + Wise 2086</span>
+          </div>
+        </div>
+        <div class="hero-img-wrap">
+          <img src="../site/images/sweetspot.jpg" alt="The Sweet Spot Tennis Shop" />
+        </div>
+      </div>
+    </header>
+
+    <!-- ── PRICE + LOCATION ── -->
+    <div class="grid-2">
+      <div class="block-price">
+        <div class="block-label">Stringing Service</div>
+        <div class="big-num">$15</div>
+        <div class="per">per racquet — labor only</div>
+        <p class="note">Bring your own strings or choose from the selection below.</p>
+      </div>
+      <div class="block-location">
+        <div class="block-label">Service Area</div>
+        <div class="areas">
+          <span class="area-tag">Downtown</span>
+          <span class="area-tag">Strathcona</span>
+          <span class="area-tag">Commercial Drive</span>
+        </div>
+        <div class="machine">
+          Electronic Gamma 6pt mount machine<br />with Wise 2086 tension head
+        </div>
+      </div>
+    </div>
+
+    <!-- ── STRINGS ── -->
+    <div class="section-title-strip">
+      <h2>Available Strings</h2>
+      <div class="strip-accent" style="background:var(--red);"></div>
+      <div class="strip-accent" style="background:var(--blue);"></div>
+      <div class="strip-accent" style="background:var(--yellow);"></div>
+      <div class="strip-accent" style="background:var(--green);"></div>
+    </div>
+
+    <div class="strings-section">
+      <table class="strings-table">
+        <thead>
+          <tr>
+            <th>String</th>
+            <th>Gauge</th>
+            <th>Color</th>
+            <th>Shape</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row-accent-grey">
+            <td><span class="string-name">Grapplesnake Tour M8</span></td>
+            <td>1.30mm</td>
+            <td><span class="color-swatch"><span class="swatch-bar" style="background:#8e9197;"></span><span class="swatch-label">Grey</span></span></td>
+            <td><span class="shape-badge sb-blue square">8</span></td>
+            <td><span class="string-price">$25</span></td>
+          </tr>
+          <tr class="row-accent-green">
+            <td><span class="string-name">Toroline O-Toro</span></td>
+            <td>1.23mm</td>
+            <td><span class="color-swatch"><span class="swatch-bar" style="background:#27ae60;"></span><span class="swatch-label">Green</span></span></td>
+            <td><span class="shape-badge sb-green circle">6</span></td>
+            <td><span class="string-price">$25</span></td>
+          </tr>
+          <tr class="row-accent-grey">
+            <td><span class="string-name string-name-struck">Toroline O-Toro Tour</span></td>
+            <td style="color:#aaa;">1.23mm</td>
+            <td><span class="color-swatch"><span class="swatch-bar" style="background:#a8d5a2;opacity:0.5;"></span><span class="swatch-label" style="color:#aaa;">Lt. Green</span></span></td>
+            <td><span class="shape-badge sb-blue circle" style="opacity:0.3;">6</span></td>
+            <td><span class="sold-out-badge">Sold Out</span></td>
+          </tr>
+          <tr class="row-accent-yellow">
+            <td><span class="string-name">Toroline O-Toro Snap</span></td>
+            <td>1.25mm</td>
+            <td><span class="color-swatch"><span class="swatch-bar" style="background:#f1c40f;"></span><span class="swatch-label">Yellow</span></span></td>
+            <td><span class="shape-badge sb-yellow circle">R</span></td>
+            <td><span class="string-price">$25</span></td>
+          </tr>
+          <tr class="row-accent-cyan">
+            <td><span class="string-name">Solinco Mach 10</span></td>
+            <td>1.20mm</td>
+            <td><span class="color-swatch"><span class="swatch-bar" style="background:#85c1e9;"></span><span class="swatch-label">Lt. Blue</span></span></td>
+            <td><span class="shape-badge sb-blue square">5</span></td>
+            <td><span class="string-price">$20</span></td>
+          </tr>
+          <tr class="row-accent-red">
+            <td><span class="string-name">Head Velocity MLT</span></td>
+            <td>1.25mm</td>
+            <td><span class="color-swatch"><span class="swatch-bar" style="background:#f5e6c8;border:1px solid #ddd;"></span><span class="swatch-label">Cream</span></span></td>
+            <td><span class="shape-badge sb-red circle">R</span></td>
+            <td><span class="string-price">$15</span></td>
+          </tr>
+          <tr class="row-accent-purple">
+            <td><span class="string-name">Head Lynx Tour</span></td>
+            <td>1.25mm</td>
+            <td><span class="color-swatch"><span class="swatch-bar" style="background:#c8a96e;"></span><span class="swatch-label">Gold</span></span></td>
+            <td><span class="shape-badge sb-purple circle">6</span></td>
+            <td><span class="string-price">$15</span></td>
+          </tr>
+          <tr class="row-accent-grey">
+            <td><span class="string-name">Tru Pro Ghost Wire</span></td>
+            <td>1.22mm</td>
+            <td><span class="color-swatch"><span class="swatch-bar" style="background:#e8e8e8;border:1px solid #ccc;"></span><span class="swatch-label">Clear</span></span></td>
+            <td><span class="shape-badge sb-blue circle">R</span></td>
+            <td><span class="string-price">$17</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="shape-key">
+        <span>Shape:</span>
+        <span class="shape-key-item"><span class="shape-badge sb-red circle" style="width:22px;height:22px;font-size:0.6rem;">R</span> Round</span>
+        <span class="shape-key-item"><span class="shape-badge sb-blue square" style="width:22px;height:22px;font-size:0.6rem;">5</span> Pentagonal</span>
+        <span class="shape-key-item"><span class="shape-badge sb-green circle" style="width:22px;height:22px;font-size:0.6rem;">6</span> Hexagonal</span>
+        <span class="shape-key-item"><span class="shape-badge sb-blue square" style="width:22px;height:22px;font-size:0.6rem;">8</span> Octagonal</span>
+      </div>
+    </div>
+
+    <!-- ── ADD-ONS ── -->
+    <div class="addons-section">
+      <h2>Additional Services</h2>
+      <ul class="addon-list">
+        <li class="addon-item">
+          <span class="addon-name">Grommet Installation</span>
+          <span class="addon-price">$10</span>
+        </li>
+        <li class="addon-item">
+          <span class="addon-name">Swingweight &amp; Static Weight Measurement</span>
+          <span class="addon-price">Free with stringing &nbsp;/&nbsp; $5</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ── FOOTER ── -->
+    <footer>
+      <span class="footer-brand">The Sweet Spot Tennis Shop</span>
+      <a href="/">enzozafra.com</a>
+    </footer>
+
+  </body>
+</html>
