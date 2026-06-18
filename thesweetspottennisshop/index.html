@@ -406,10 +406,10 @@
       .sb-green  { background: var(--green);  }
       .sb-purple { background: var(--purple); }
 
-      .shape-badge.circle  { border-radius: 50%; }
-      .shape-badge.square  { border-radius: 0; }
-      .shape-badge.diamond { transform: rotate(45deg); border-radius: 0; }
-      .shape-badge.diamond span { transform: rotate(-45deg); display: block; }
+      .shape-badge.circle   { border-radius: 50%; }
+      .shape-badge.pentagon { clip-path: polygon(50% 0%, 97.6% 34.5%, 79.4% 90.5%, 20.6% 90.5%, 2.4% 34.5%); border-radius: 0; }
+      .shape-badge.hexagon  { clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); border-radius: 0; }
+      .shape-badge.octagon  { clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%); border-radius: 0; }
 
       .string-price {
         font-family: 'Bebas Neue', sans-serif;
@@ -626,21 +626,21 @@
             <td><span class="string-name">Grapplesnake Tour M8</span></td>
             <td>1.30mm</td>
             <td><span class="color-swatch"><span class="swatch-bar" style="background:#8e9197;"></span><span class="swatch-label">Grey</span></span></td>
-            <td><span class="shape-badge sb-blue square">8</span></td>
+            <td><span class="shape-badge sb-blue octagon">8</span></td>
             <td><span class="string-price">$25</span></td>
           </tr>
           <tr class="row-accent-green">
             <td><span class="string-name">Toroline O-Toro</span></td>
             <td>1.23mm</td>
             <td><span class="color-swatch"><span class="swatch-bar" style="background:#27ae60;"></span><span class="swatch-label">Green</span></span></td>
-            <td><span class="shape-badge sb-green circle">6</span></td>
+            <td><span class="shape-badge sb-green hexagon">6</span></td>
             <td><span class="string-price">$25</span></td>
           </tr>
           <tr class="row-accent-grey">
             <td><span class="string-name string-name-struck">Toroline O-Toro Tour</span></td>
             <td style="color:#aaa;">1.23mm</td>
             <td><span class="color-swatch"><span class="swatch-bar" style="background:#a8d5a2;opacity:0.5;"></span><span class="swatch-label" style="color:#aaa;">Lt. Green</span></span></td>
-            <td><span class="shape-badge sb-blue circle" style="opacity:0.3;">6</span></td>
+            <td><span class="shape-badge sb-blue hexagon" style="opacity:0.3;">6</span></td>
             <td><span class="sold-out-badge">Sold Out</span></td>
           </tr>
           <tr class="row-accent-yellow">
@@ -654,7 +654,7 @@
             <td><span class="string-name">Solinco Mach 10</span></td>
             <td>1.20mm</td>
             <td><span class="color-swatch"><span class="swatch-bar" style="background:#85c1e9;"></span><span class="swatch-label">Lt. Blue</span></span></td>
-            <td><span class="shape-badge sb-blue square">5</span></td>
+            <td><span class="shape-badge sb-blue pentagon">5</span></td>
             <td><span class="string-price">$20</span></td>
           </tr>
           <tr class="row-accent-red">
@@ -668,7 +668,7 @@
             <td><span class="string-name">Head Lynx Tour</span></td>
             <td>1.25mm</td>
             <td><span class="color-swatch"><span class="swatch-bar" style="background:#c8a96e;"></span><span class="swatch-label">Gold</span></span></td>
-            <td><span class="shape-badge sb-purple circle">6</span></td>
+            <td><span class="shape-badge sb-purple hexagon">6</span></td>
             <td><span class="string-price">$15</span></td>
           </tr>
           <tr class="row-accent-grey">
@@ -684,9 +684,9 @@
       <div class="shape-key">
         <span>Shape:</span>
         <span class="shape-key-item"><span class="shape-badge sb-red circle" style="width:22px;height:22px;font-size:0.6rem;">R</span> Round</span>
-        <span class="shape-key-item"><span class="shape-badge sb-blue square" style="width:22px;height:22px;font-size:0.6rem;">5</span> Pentagonal</span>
-        <span class="shape-key-item"><span class="shape-badge sb-green circle" style="width:22px;height:22px;font-size:0.6rem;">6</span> Hexagonal</span>
-        <span class="shape-key-item"><span class="shape-badge sb-blue square" style="width:22px;height:22px;font-size:0.6rem;">8</span> Octagonal</span>
+        <span class="shape-key-item"><span class="shape-badge sb-blue pentagon" style="width:22px;height:22px;font-size:0.6rem;">5</span> Pentagonal</span>
+        <span class="shape-key-item"><span class="shape-badge sb-green hexagon" style="width:22px;height:22px;font-size:0.6rem;">6</span> Hexagonal</span>
+        <span class="shape-key-item"><span class="shape-badge sb-blue octagon" style="width:22px;height:22px;font-size:0.6rem;">8</span> Octagonal</span>
       </div>
     </div>
 
